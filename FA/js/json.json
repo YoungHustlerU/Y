@@ -1,0 +1,16 @@
+{
+	"logo":"http://www.fila.cn/themes/pc/fila/images/common_180905/fila_blue_150.png",
+	"navzb":["登入","注册"],
+	"centerT":[
+	"https://fila-image01.obs.myhwclouds.com/index/sy-ds1958-pc.jpg",
+	"https://fila-image01.obs.myhwclouds.com/index/sy-190419-Street-pc.gif",
+	"https://fila-image01.obs.myhwclouds.com/index/sy-tracer190507-pc.jpg",
+	"https://fila-image01.obs.myhwclouds.com/index/sy-19-q2-yatPC.jpg",
+	" https://fila-image01.obs.myhwclouds.com/index/sy-19-q2-silaPC.jpg"
+	],
+	"navi":["搜索","登入","注册"],
+	"ns":["T恤上衣","卫衣","外套","裤装","休闲鞋","运动鞋","包包附配饰"],
+	"et":["男童-服装","男童-鞋类","男童-包包附配饰","女童-服装","女童-鞋类","女童-包包附配饰"],
+	"bnav":["购物服务","关于品牌","查找门店"],
+	"jf":["会员积分","购物服务","关于FILA"]
+}

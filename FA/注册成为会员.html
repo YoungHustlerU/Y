@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/zc.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1168711_eey7dmv408i.css"/>
+	</head>
+	<body>
+		<div class="CONTER">
+			<div class="center">
+				<div class="hydl">
+						<span>欢迎加入</span>
+						<a href="index.html"><img src="img/login-logo.png"/></a>
+				</div>
+					<input type="text"placeholder="手机号"/><br />
+					<input type="text"placeholder="图形验证码"/><br />
+					<input type="button" name="" id="btn" value="确认" /><br />
+					<a href="会员登录.html" class="dl">已有账号？立即登录</a>
+					
+			</div>
+			<img class="erweima"src="img/weixin0525.jpg"/>
+		</div>
+		<div class="bottom">
+				<ul>
+					<li></li>
+				</ul>
+				<p class="gfmt">关注FILA的官方媒体:
+					<a href="#" class="iconfont icon-weibo"id="icwb"></a>
+					<a href="#" class="iconfont icon-weixin"id="icwx"></a>
+				</p>
+				<p class="dh">售后服务电话: 400-886-7699</p>
+				<p class="bianhao">©FILA体育 闽ICP备11020421号-8</p>
+			</div>
+		</div>
+		<div class="haha"></div>
+
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.ajax({
+				type:"get",
+				url:"js/json.json",
+				async:false,
+				success:function(data){
+					$.each(data.bnav,function(i,b){
+						$("<a href='#'></a>").html(b).appendTo($(".bottom ul li"))	
+					})
+				}
+			});
+			$(function(){
+				$("input").focus(function(){
+					$(this).css("box-shadow","#d9edf7 0px 0px 2px 2px")
+				}).blur(function(){
+					$(this).css("box-shadow","white")
+				})
+				
+				$("#icwb").mouseover(function(){
+					$("#icwb").prop("class","iconfont icon-weibo1")
+				}).mouseleave(function(){
+				    $("#icwb").prop("class","iconfont icon-weibo")
+				})
+				$("#icwx").mouseover(function(){
+					$("#icwx").prop("class","iconfont icon-weibo1")
+					$(".erweima").css("display","block")
+				}).mouseleave(function(){
+				    $("#icwx").prop("class","iconfont icon-weixin")
+				    $(".erweima").css("display","none")
+				})
+				$("input:eq(2)").click(function(){
+					alert("不给注")
+				})
+			})
+			
+		</script>
+	</body>
+</html>

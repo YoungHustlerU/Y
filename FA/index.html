@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="img/logo.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1168711_eey7dmv408i.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="box">
+			<div class="nav">
+				<div class="nav_logo">
+					<img src=""/>
+				</div>
+				<div class="nav_right">
+					<input type="text"id="ipt"value=" 短袖" />
+					<p class="nvaz"><a href="#">搜索</a></p>
+					<p class="navzb">
+						<a href="会员登录.html">登入</a>
+						<a href="注册成为会员.html">注册</a>
+					</p>
+					<a href="#" class="iconfont icon-yonghusuo"id="ic"></a>
+					<a href="#" class="iconfont icon-cn"id="ic"></a>
+					
+				</div>
+			</div>
+			<div class="center">
+				<div class="center_left">
+					<div class="center_left_top">
+						<div class="center_xiala">
+							<div class="nanshi">
+										<h4><a href="#">男士</a></h4>
+										<ul></ul>
+							</div>
+							<div class="nvshi">
+										<h4><a href="#">女士</a></h4>
+										<ul></ul>
+							</div>
+							<div class="ertong">
+										<h4><a href="#">儿童</a></h4>
+										<ul></ul>
+							</div>
+							<div class="DX">
+								<h4 class="dx"><a href="#">FUSION</a></h4>
+								<h4><a href="#">ATHLETICS</a></h4>
+								<h4><a href="#">FILA X 3.1 Phillip Lim</a></h4>
+								<h4 class="dx"><a href="#"style="color:#CF5A4A;">积分商城</a></h4>
+							</div>
+							
+						</div>
+					</div>
+					<div class="center_left_bottom">
+						 <ul class="list-group">
+                			 <li class="list-group-item">
+                   			 <h4><i>+</i>会员积分</h4>
+		                    <ul class="cat2-list">
+		                        <li class="cat2-li"><a href="/n-45.html" target="_blank">积分抵现</a></li>
+		                        <li class="cat2-li"><a href="/n-28.html" target="_blank">积分说明</a></li>
+		                        <li class="cat2-li"><a href="/pmall.html" target="_blank">积分商城</a></li>
+		                        <li class="cat2-li"><a href="/wy.html" target="_blank">明星专区</a></li>
+		                        <li class="cat2-li"><a href="/ucenter.html" target="_blank">会员制度</a></li>
+		                    </ul>
+                			</li>
+		                <li class="list-group-item">
+		                    <h4><i>+</i>购物服务</h4>
+		                    <ul class="cat2-list">
+		                        <li class="cat2-li"><a href="/n-26.html" target="_blank">购物流程</a></li>
+		                        <li class="cat2-li"><a href="/n-30.html" target="_blank">支付及发票</a></li>
+		                        <li class="cat2-li"><a href="/n-32.html" target="_blank">物流配送</a></li>
+		                        <li class="cat2-li"><a href="/n-37.html" target="_blank">退换货服务</a></li>
+		                        <li class="cat2-li"><a href="/tuan.html" target="_blank">企业团购</a></li>
+		                    </ul>
+		                </li>
+		                <li class="list-group-item">
+		                    <h4><i>+</i>关于FILA</h4>
+		                    <ul class="cat2-list">
+		                        <li class="cat2-li"><a href="/history.html" target="_blank">百年历史</a></li>
+		                        <li class="cat2-li"><a href="/shop.html" target="_blank">查找门店</a></li>
+		                        <li class="cat2-li"><a href="/zp.html" target="_blank">工作机会</a></li>
+		                        <li class="cat2-li"><a href="/regionSelector.html" target="_blank">切换国家</a></li>
+		                        <li class="cat2-li"><a href="/statement.html" target="_blank">使用条款</a></li>
+		                    </ul>
+		                </li>
+		                <h4 class="xinwen">
+		                	<a href="#" >热点新闻</a>
+		                </h4>
+					</div>
+				</div>
+				<div class="center_right">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+								      
+						</div>
+				    </div>
+				    <img class="erweima"src="img/weixin0525.jpg"/>
+			</div>
+			<div class="bottom_nav">
+				<ul>
+					<li></li>
+				</ul>
+				<p class="gfmt">关注FILA的官方媒体:
+					<a href="#" class="iconfont icon-weibo"id="icwb"></a>
+					<a href="#" class="iconfont icon-weixin"id="icwx"></a>
+				</p>
+				<p class="dh">售后服务电话: 400-886-7699</p>
+				<p class="bianhao">©FILA体育 闽ICP备11020421号-8</p>
+			</div>
+		</div>
+		
+		
+		
+		
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.ajax({
+				type:"get",
+				url:"js/json.json",
+				async:false,
+				success:function(data){
+					$(".nav_logo img").attr("src",data.logo)
+					$.each(data.centerT,function(i,t){
+						var newLbo = $("<div class='swiper-slide'></div>").append($("<img/>").prop("src",t))
+						$('.swiper-wrapper').append(newLbo)
+					})
+					$.each(data.navi,function(i,n){
+						$("<li></li>").html(n).appendTo($(".uli"))	
+					})
+					$.each(data.ns,function(i,nan){
+						$("<li class='nan'><a>"+ nan+ "</a></li>").appendTo($(".nanshi ul "))	
+					})
+					$.each(data.ns,function(i,nv){
+						$("<li class='nv'></li>").html(nv).appendTo($(".nvshi ul "))	
+					})
+					$.each(data.et,function(i,et){
+						$("<li class='et'></li>").html(et).appendTo($(".ertong ul "))	
+					})
+					$.each(data.bnav,function(i,b){
+						$("<a href='#'></a>").html(b).appendTo($(".bottom_nav ul li"))	
+					})
+					$.each(data.jf,function(i,jf){
+						$("<p class='jf'></p>").html(jf).appendTo($(".jifen"))	
+					})
+				}
+			});
+	
+					$(".center_xiala h4").click(function(){
+						if($(this).siblings('ul').css('display')=='none'){
+							$(this).siblings('ul').show().parent().siblings().find('ul').hide()
+						}else{
+							$(this).siblings('ul').hide()
+						}
+					})
+					$(".list-group-item h4").click(function(){
+						if($(this).siblings('ul').css('display')=='none'){
+							$(this).siblings('ul').show().parent().siblings().find('ul').hide()
+						}else{
+							$(this).siblings('ul').hide()
+						}
+					})
+					
+					 $('.centerTp img').eq(0).show().siblings('.item').hide();
+					 
+					 
+					 var mySwiper = new Swiper('.swiper-container',{
+						slidesPerView: 1,
+						spaceBetween: 30,
+						loop: true,
+						pagination: {
+							el: '.swiper-pagination'
+      					},
+						autoplay: {
+							delay: 2600,
+							disableOnInteraction: false,
+						}
+					})
+					 
+					 $("#icwb").mouseover(function(){
+							$("#icwb").prop("class","iconfont icon-weibo1")
+						}).mouseleave(function(){
+						    $("#icwb").prop("class","iconfont icon-weibo")
+						})
+					$("#icwx").mouseover(function(){
+							$("#icwx").prop("class","iconfont icon-weibo1")
+							$(".erweima").css("display","block")
+					}).mouseleave(function(){
+						    $("#icwx").prop("class","iconfont icon-weixin")
+						    $(".erweima").css("display","none")
+					})
+				$(".nan>a:eq(0)").attr("href","商品列表.html")
+				$(".nan:eq(1)").click(function(){
+					alert("不准看")
+				})
+			
+		</script>
+	</body>
+</html>

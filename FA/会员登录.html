@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/dl.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1168711_eey7dmv408i.css"/>
+	</head>
+	<body>
+		<div class="BON">
+			<div class="B_left">
+				<div class="Br">
+					<div class="hydl">
+						<span>欢迎登录</span>
+						<a href="index.html"><img src="img/login-logo.png"/></a>
+					</div>
+					<div class="dlzc">
+						<div class="dl ">
+							<h4>账号密码登录</h4>
+						</div>
+						<div class="zc select">
+							<h4>短信快捷登录/注册</h4>
+						</div>
+					</div>
+					<div class="inp">
+						<div class="inp1">
+							<input type="text"placeholder="手机号"/><br />
+							<input type="text"placeholder="图形验证码"/><br />
+							<input type="text"placeholder="短信验证码"/>
+							<input type="button"value="获取验证码"id="yanzm"/>
+							<button type="submit" id="dl" data-load ing-text="正在登录...">
+								立即登录
+							</button>
+						</div>
+						<div class="inp2">
+							<input type="text"placeholder="手机号"/><br />
+							<input type="text"placeholder="密码"/><br />
+							<button type="submit" class="btdl" data-load ing-text="正在登录...">
+								立即登录
+							</button>
+						</div>
+					</div>
+					<div class="X">
+						<span class="x"></span><span>第三方信任登录</span><span class="x"></span>
+					</div>
+						<div class="qq"></div>
+						<a href="#" class="wjmm hide">忘记密码?</a>
+				</div>
+			</div>
+			<div class="B_right">
+				<div class="Brr">
+					<h2>加入FILA V.I.P.</h2>
+					<p>注册成为会员并完善个人信息，即可享受 ：</p>
+					<ul>
+						<li>注册即送50元现金券；</li>
+						<li>积分可在官网购物时作为现金抵扣；</li>
+						<li>官网、门店消费共享会员权益和积分累计；</li>
+						<li>即时收到优惠及新品发布信息，品牌活动邀约</li>
+					</ul>
+					
+				</div>
+				<a href="注册成为会员.html"><button type="submit" id="zc">
+							立即注册
+				</button></a>
+			</div>
+			<img class="erweima"src="img/weixin0525.jpg"/>
+			
+		</div>
+		<div class="bottom">
+				<ul>
+					<li></li>
+				</ul>
+				<p class="gfmt">关注FILA的官方媒体:
+					<a href="#" class="iconfont icon-weibo"id="icwb"></a>
+					<a href="#" class="iconfont icon-weixin"id="icwx"></a>
+				</p>
+				<p class="dh">售后服务电话: 400-886-7699</p>
+				<p class="bianhao">©FILA体育 闽ICP备11020421号-8</p>
+			</div>
+		</div>
+		<div class="haha"></div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.ajax({
+				type:"get",
+				url:"js/json.json",
+				async:false,
+				success:function(data){
+					$.each(data.bnav,function(i,b){
+						$("<a href='#'></a>").html(b).appendTo($(".bottom ul li"))	
+					})
+				}
+			});
+			$(function(){
+				$(".dlzc div").click(function(){
+					$(this).addClass('select').siblings().removeClass('select');
+				})
+				$(".dl").click(function(){
+						$(".wjmm").removeClass("hide")
+						$(".inp2").css("display","block")
+						$(".inp1").css("display","none")
+						
+				})
+				$(".zc").click(function(){
+						$(".wjmm").addClass("hide")
+						$(".inp2").css("display","none")
+						$(".inp1").css("display","block")
+						
+				})
+				$("#icwb").mouseover(function(){
+					$("#icwb").prop("class","iconfont icon-weibo1")
+				}).mouseleave(function(){
+				    $("#icwb").prop("class","iconfont icon-weibo")
+				})
+				$("#icwx").mouseover(function(){
+					$("#icwx").prop("class","iconfont icon-weibo1")
+					$(".erweima").css("display","block")
+				}).mouseleave(function(){
+				    $("#icwx").prop("class","iconfont icon-weixin")
+				    $(".erweima").css("display","none")
+				})
+				$("input").focus(function(){
+					$(this).css("box-shadow","#d9edf7 0px 0px 3px 1px")
+				}).blur(function(){
+					$(this).css("box-shadow","white")
+				})
+				$("#dl").click(function(){
+					alert("。。。。")
+				})
+			})
+		</script>
+	</body>
+</html>

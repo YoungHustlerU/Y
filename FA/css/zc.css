@@ -1,0 +1,151 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+    height: 100%;
+    min-width: 1424px;
+    overflow-x: hidden;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+.CONTER{
+	width:1171px;
+	height: 819px;
+	margin:0 auto;
+	margin-top: 150px;
+}
+.center{
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+}
+.hydl{
+	width: 100%;
+	background-color: transparent;
+    border-color: #fff;
+    padding: 0;
+    width: 330px;
+    margin-left: 36px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+.hydl span{
+	font-size: 20px;
+    color: #222;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.hydl img{
+	position: relative;
+	top: 10px;
+}
+
+input{
+	width: 295px;
+	height:40px;
+	margin-bottom: 9px;
+	margin-left: 10%;
+	border: 1px solid #e8e8e8;
+	padding: 0px 13px 0px 15px;
+	outline: none;
+
+}
+#btn{
+	width: 325px;
+	height: 40px;
+	background: #03234C;
+	color:white;
+	font-size: 17px;
+	border:solid 1px #03234C;
+	margin-left: 10%;
+	cursor: pointer;
+}
+.dl{
+	text-decoration: none;
+    outline: none;
+	font-size: 14px;
+	color: #666;
+	position: relative;	
+	left: 130px;
+	top:20px;
+}
+.dl:hover{
+	color: black;
+}
+.bottom{
+	background:#03234c;
+	height: 50px;
+	background:#03234C;
+	list-style: none;
+}
+.bottom a {
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+	position: relative;
+	top: 16px;
+	left: 40px;
+	margin-left: 25px;
+}
+.hide{
+    display: none!important;
+}
+.gfmt{
+	height:30px;
+	width: 270px;
+	margin-left:300px;
+	margin-top:-21px;
+	color: #fff;
+    font-size: 14px
+}
+#icwb{
+	font-size: 35px;
+	position: relative;
+	left:-14px;
+    top:9px;
+}
+#icwx{
+	font-size: 23px;
+	position: relative;
+	left:-30px;
+    top:4px;
+}
+.erweima{
+	height: 120px;
+	width: 120px;
+	position: fixed;
+	left:449px;
+	bottom: 50px;
+	display: none;
+	padding: 7px;
+	border: solid 1px #888888;
+}
+.haha{
+	border: solid 1px black;
+	border-right: white;
+	height: 40px;
+	width: 120px;
+	position: fixed;
+	right: 0px;
+	margin-top: -220px;
+	float: left;
+	letter-spacing: 3px;
+}
+.dh{
+	height:25px;
+	width: 200px;
+	margin-left:550px;
+	margin-top:-13px;
+	color: #fff;
+    font-size: 14px
+}
+.bianhao{
+	position: relative;
+	left:85.7%;
+	top:-25px;
+	color: #888888;
+    font-size: 14px
+}
